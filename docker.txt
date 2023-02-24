@@ -1,0 +1,20 @@
+docker images
+docker rmi $(docker images --all --quiet)
+
+docker ps --all
+docker stop $(docker ps)
+docker rm $(docker ps --all --quiet)
+docker start ID
+
+// layers
+docker histoty IMAGE ID
+
+docker exec -it (ID / myname) bash
+
+// t for tty, d for detached 
+docker run --rm -d --name=myname ubuntu:latest > /dev/null
+docker run -it --rm ubunut:latest
+
+docker build -t myname:mytag . 
+docker build -t myname:mytag ~/user/dir/ -f Dockerfile.file1
+
