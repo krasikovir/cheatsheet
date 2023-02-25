@@ -15,7 +15,7 @@ docker exec -it (ID / myname) bash
 docker run --rm -d --name=myname ubuntu:latest > /dev/null
 docker run -it --rm ubunut:latest
 
-touch .dockerignore
-echo "large.txt" >> .dockerignore
+touch /path/to/context/.dockerignore
+echo "large.txt" >> /path/to/context/.dockerignore
 docker build --tag name:tag --file /path/Dockerifle.abc /path/to/context/
 
