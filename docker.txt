@@ -17,6 +17,5 @@ docker run -it --rm ubunut:latest
 
 touch .dockerignore
 echo "large.txt" >> .dockerignore
-docker build -t myname:mytag . 
-docker build -t myname:mytag ~/user/dir/ -f Dockerfile.file1
+docker build --tag name:tag --file /path/Dockerifle.abc /path/to/context/
 
