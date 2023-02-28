@@ -1,3 +1,14 @@
+docker system df
+
+// cache
+docker builder prune
+docker builder prune --all
+
+// volumes
+docker volume prune 
+docker volume prune --all
+
+
 docker images
 docker rmi $(docker images --all --quiet)
 
@@ -19,3 +30,5 @@ touch /path/to/context/.dockerignore
 echo "large.txt" >> /path/to/context/.dockerignore
 docker build --tag name:tag --file /path/Dockerifle.abc /path/to/context/
 
+bash -c pwd
+zsh -c ls
