@@ -6,8 +6,16 @@ docker builder prune --all
 
 // volumes
 docker volume prune 
-docker volume prune --all
+docker volume ls
+docker volume create myvolume
+docker volume rm $(docker volume ls --quiet)
 
+// copy
+docker cp <src> (ID/name): <dest>
+
+// run & volume
+docker run -it --rm -v /path/mydir1:/path_inside/mydir1 ubuntu:latest
+docker run -it --rm -v myvol:/<dest> ubuntu:latest
 
 docker images
 docker rmi $(docker images --all --quiet)
