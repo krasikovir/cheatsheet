@@ -6,4 +6,4 @@ pyenv uninstall -f 3.6 3.6.1
 
 
 pyenv virtualenv 3.7 myenv
-pyenv activate mynev
+pyenv local myenv
