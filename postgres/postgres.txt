@@ -1,0 +1,15 @@
+initdb --locale=C -E UTF-8 /usr/local/var/postgresql@14
+
+// status
+pg_ctl status -D /usr/local/var/postgresql@14
+
+// default stop
+pg_ctl stop -D /usr/local/var/postgresql@14 -m immediate
+pg_ctl stop -D /usr/local/var/postgresql@14
+
+// kill
+lsof -i -n -P | grep postgres
+ps aux | grep postgres
+
+
+pg_ctl start -D /usr/local/var/postgresql@14
