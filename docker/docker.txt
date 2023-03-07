@@ -13,9 +13,12 @@ docker volume rm $(docker volume ls --quiet)
 // copy
 docker cp <src> (ID/name): <dest>
 
-// run & volume
-docker run -it --rm -v /path/mydir1:/path_inside/mydir1 ubuntu:latest
-docker run -it --rm -v myvol:/<dest> ubuntu:latest
+// bind mount
+docker run -it --rm --volume /path/mydir1:/path_inside/mydir1 ubuntu:latest
+
+// volume
+docker run -it --rm --volume myvol:/<dest> ubuntu:latest
+docker run -it --rm --volume myvol:/<dest>:ro ubuntu:latest <-- read only
 
 docker images
 docker rmi $(docker images --all --quiet)
