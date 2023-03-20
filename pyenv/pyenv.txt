@@ -4,6 +4,7 @@ pyenv install 3.7
 // uninstall pyenv virtualenvs connected to this versions
 pyenv uninstall -f 3.6 3.6.1 
 
-
 pyenv virtualenv 3.7 myenv
+pyenv virtualenvs
 pyenv local myenv
+pyenv virtualenv-delete myenv
